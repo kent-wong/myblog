@@ -13,8 +13,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['MAIL_SERVER'] = 'smtp.163.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'w02682@163.com' #os.environ.get('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = 'Junjun22961' #os.environ.get('EMAIL_PASSWORD')
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASSWORD')
 
 
 db = SQLAlchemy(app)
